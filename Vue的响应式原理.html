@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+  <body>
+    <!-- app.message修改数据。
+      1、Vue内部如何监听message数据的改变 
+        * Object.defineProperty技术:监听对象属性的改变
+      2、当数据发生改变时，Vue是如何知道要通知哪些人,页面发生刷新
+        *发布订阅者模式
+    -->
+    <div>
+      {{message}}
+      {{message}}
+      {{message}}
+      {{name}}
+    </div>
+    <script src="./node_modules/vue/dist/vue.js">
+    </script>
+    <script>
+      const app = new Vue({
+        el:"#app",
+        data:{
+          message:'哈哈哈哈哈',
+          name:'聂倩'
+        }
+      })
+    </script>
+  </body>
+</html>

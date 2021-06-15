@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <keep-alive exclude = "Detail">
+      <!-- 排除Detail，否则详情页点击进去，一直是同一个iid（图片）的详情页 -->
+      <router-view/>
+    </keep-alive>
+    <main-tab-bar/>
+    <icon></icon>
+    <svg-icon></svg-icon>
   </div>
+ 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// 导入后，必将该组件先在下边注册，然后在上边写成标签
+import MainTabBar from  "components/content/maintabbar/MainTabBar"
+import Icon from "components/content/Icon/Icon"
+import SvgIcon from "components/content/Icon/SvgIcon"
+// import Home from "views/home/Home"
+// import Category from "views/category/Category"
+// import Shopcart from "views/shopcart/Shopcart"
+// import Profile from "views/profile/Profile"
+// import Category from './views/category/Category.vue'
+// import Shopcart from './views/shopcart/Shopcart.vue'
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    MainTabBar,
+    Icon,
+    SvgIcon
+    
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "assets/css/base.css";
+
+  #app {
+    position: relative;
+  }
 </style>
