@@ -2,9 +2,6 @@ export const TK = "TK";
 export const R_TK = "R_TK";
 export const BACK_POSITION = 1000;
 
-export const POP = 'pop';
-export const NEW = 'new';
-export const SELL = 'sell';
 
 // 获取token里的uid
 export function getUid() {
@@ -35,3 +32,9 @@ export function removeToken() {
   localStorage.removeItem(TK);
   localStorage.removeItem(R_TK);
 }
+
+
+
+export const POP = 'pop';
+export const NEW = 'new';
+export const SELL = 'sell';

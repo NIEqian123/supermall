@@ -36,9 +36,9 @@
 </template>
 
 <script>
-import HomeSwiper from "./childComponent/HomeSwiper";
-import RecommendView from "./childComponent/RecommendView";
-import FeatureView from "./childComponent/FeatureView";
+import HomeSwiper from "./childComps/HomeSwiper";
+import RecommendView from "./childComps/RecommendView";
+import FeatureView from "./childComps/FeatureView";
 
 import NavBar from "components/common/navbar/NavBar";
 import TabControl from "components/content/tabControl/TabControl";

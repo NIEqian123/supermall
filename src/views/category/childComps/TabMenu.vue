@@ -1,5 +1,6 @@
 <template>
-<scroll id="tab-menu">
+<div class = "tab-menu">
+<scroll class="content">
   <div class="menu-list">
     <div class="menu-list-item"
        :class="{active: index===currentIndex}"
@@ -9,8 +10,9 @@
        {{item.title}}
     </div>
   </div>
-
 </scroll>
+</div>
+
 
 </template>
 
@@ -39,11 +41,15 @@ export default{
 </script>
 
 <style scoped>
-#tab-menu{
+.tab-menu{
   background-color: #f6f6f6;
-  height:100%;
+  height: calc(100vh - 44px - 49px);
   width:100px;
   box-sizing:border-box
+}
+.content{
+  height:100%;
+  overflow: hidden;
 }
 
 .menu-list-item{

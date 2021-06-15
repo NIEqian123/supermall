@@ -1,5 +1,5 @@
 import {request} from "./request"
-export function getCategory(iid){
+export function getCategory(){
   return request({
     url:"/category",
     // params:{
@@ -8,20 +8,20 @@ export function getCategory(iid){
   })
 }
 
-export function getSubcategory(mailKey){
+export function getSubcategory(maitKey){
   return request({
     url:"/subcategory",
     params:{
-      mailKey
+      maitKey
     }
   })
 }
 
-export function getCategoryDetail(miniWallKey,type){
+export function getCategoryDetail(miniWallkey,type){
   return request({
     url:"/subcategory/detail",
-    param:{
-      miniWallKey,
+    params:{
+      miniWallkey,
       type
     }
   })
