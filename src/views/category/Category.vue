@@ -6,11 +6,11 @@
 
       <scroll class="content" :data="[categoryData]">
         <div>
-          <tab-control
+          <!-- <tab-control
             class="tabcontrol"
             :titles="['综合', '新品', '销量']"
             @itemClick="tabClick"
-          ></tab-control>
+          ></tab-control> -->
           <tab-content-category
             :subcategories="showSubcategory"
           ></tab-content-category>
